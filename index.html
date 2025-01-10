@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goodeats</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/extern/includes.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div
+        class="sticky-header container-fluid d-flex flex-row align-items-center justify-content-between"
+      >
+        <div class="navbar-brand p-2">
+          <a class="navbar-brand" href="#">
+            <h1 class="text-script">Goodeats</h1>
+          </a>
+        </div>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#section-home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-featured">Featured</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-browse">Browse Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-contact">Contact</a>
+          </li>
+        </ul>
+        <div class="submit-recipe">
+          <button type="button" class="btn btn-colored" data-bs-toggle="modal" data-bs-target="#recipe-submit-modal">Submit a Recipe</button>
+        </div>
+      </div>
+    </div>
+    <section id="section-home" class="section">
+      <div id="home-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#home-carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#home-carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#home-carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="assets/images/featured-1.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <h1 class="text-script">Chicken and Pork Adobo</h1>
+              <p>
+                A classic Filipino dish featuring tender chicken and pork
+                simmered in a tangy, savory sauce of soy sauce, vinegar, garlic,
+                and spices. Its rich flavors and comforting aroma make it
+                perfect for any meal, whether it’s a hearty lunch or a cozy
+                dinner. Best enjoyed with steamed rice, it's a satisfying dish
+                for any occasion.
+              </p>
+              <button
+                class="btn btn-colored"
+                data-bs-toggle="modal"
+                data-bs-target="#ln-1-recipe"
+              >
+                View Recipe
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img
+              src="assets/images/featured-2.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <h1 class="text-script">Pork Sinigang</h1>
+              <p>
+                A beloved sour soup made with tender pork, fresh vegetables, and
+                a tangy tamarind-based broth. Its comforting, zesty flavor is
+                perfect for chilly days or when you're craving a hearty,
+                home-cooked meal. Best served piping hot with steamed rice, it’s
+                a dish that warms both the heart and the stomach.
+              </p>
+			  <button
+                class="btn btn-colored"
+                data-bs-toggle="modal"
+                data-bs-target="#dn-1-recipe"
+              >
+                View Recipe
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <img
+              src="assets/images/featured-3.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <h1 class="text-script">Leche Flan</h1>
+              <p>
+                A rich and creamy Filipino dessert made with a smooth custard
+                base topped with a golden caramel glaze. Its velvety texture and
+                sweet, indulgent flavor make it a perfect treat for celebrations
+                or as a sweet ending to any meal. Served chilled, it’s a classic
+                favorite that never fails to delight./p>
+              </p>
+			  <button
+                class="btn btn-colored"
+                data-bs-toggle="modal"
+                data-bs-target="#ds-1-recipe"
+              >
+                View Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#home-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#home-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section id="section-featured" class="section">
+      <div class="section-title">
+        <h1>
+          <span class="text-highlight">Featured</span>
+          recipes
+        </h1>
+        <h5>Browse our featured recipes that will surely make your day!</h5>
+      </div>
+      <div class="section-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex align-items-start">
+              <div
+                id="featured-tab"
+                class="nav flex-column nav-pills me-3"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active"
+                  id="v-pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-home"
+                  aria-selected="true"
+                >
+                  Chicken and Pork Adobo
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-profile"
+                  aria-selected="false"
+                >
+                  Pork Sinigang
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-disabled-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-disabled"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-disabled"
+                  aria-selected="false"
+                >
+                  Leche Flan
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-messages-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-messages"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-messages"
+                  aria-selected="false"
+                >
+                  Bistek Tagalog
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-pills-settings-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-settings"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-settings"
+                  aria-selected="false"
+                >
+                  Filipino Fried Chicken
+                </button>
+              </div>
+              <div class="tab-content" id="v-pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-home"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-home-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="container-fluid d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <div class="featured-text">
+                      <h1 class="text-fancy">Chicken and Pork Adobo</h1>
+                      <h6 class="text-muted">
+                        "Two meats, one legendary flavor—Chicken and Pork Adobo,
+                        the ultimate comfort food! 🍗🐖✨"
+                      </h6>
+                      <br />
+                      <p>
+                        Chicken and Pork Adobo is made by simmering chicken and
+                        pork in a flavorful blend of soy sauce, vinegar, garlic,
+                        and spices until tender and infused with rich, savory
+                        goodness. A touch of bay leaves and peppercorns adds
+                        depth, while the slow cooking creates a luscious, tangy
+                        sauce. Serve it with steamed rice for the perfect
+                        Filipino classic!
+                      </p>
+					  <button
+                class="btn btn-colored"
+                data-bs-toggle="modal"
+                data-bs-target="#ln-1-recipe"
+              >
+                View Recipe
+              </button>
+                    </div>
+                    <div class="featured-image">
+                      <img
+                        src="assets/images/featured-1.jpeg"
+                        height="300"
+                        width="300"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-profile"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-profile-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="container-fluid d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <div class="featured-text">
+                      <h1 class="text-fancy">Pork Sinigang</h1>
+                      <h6 class="text-muted">
+                        "Tangy, hearty, and oh-so-comforting—Pork Sinigang hits
+                        the sour spot! 🍲💚"
+                      </h6>
+                      <br />
+                      <p>
+                        Pork Sinigang is made by simmering tender pork cuts with
+                        fresh vegetables like radish, eggplant, and okra in a
+                        tamarind-infused broth. The tangy flavor comes alive as
+                        the ingredients meld together, creating a hearty and
+                        satisfying sour soup that's best enjoyed with steamed
+                        rice.
+                      </p>
+					  <button
+                class="btn btn-colored"
+                data-bs-toggle="modal"
+                data-bs-target="#dn-1-recipe"
+              >
+                View Recipe
+              </button>
+                    </div>
+                    <div class="featured-image">
+                      <img
+                        src="assets/images/featured-2.jpeg"
+                        height="300"
+                        width="300"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-disabled"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-disabled-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="container-fluid d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <div class="featured-text">
+                      <h1 class="text-fancy">Leche Flan</h1>
+                      <h6 class="text-muted">
+                        "Indulge in the creamy sweetness of Leche Flan—dessert
+                        perfection in every bite! 🍮✨"
+                      </h6>
+                      <br />
+                      <p>
+                        Leche Flan is made by blending eggs, condensed milk, and
+                        sugar, then gently steaming the mixture to create a
+                        rich, velvety custard. The golden caramel on top adds
+                        the perfect sweet finishing touch to this classic
+                        Filipino dessert.
+                      </p>
+					  <button
+                class="btn btn-colored"
+                data-bs-toggle="modal"
+                data-bs-target="#ds-1-recipe"
+              >
+                View Recipe
+              </button>
+                    </div>
+                    <div class="featured-image">
+                      <img
+                        src="assets/images/featured-3.jpeg"
+                        height="300"
+                        width="300"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-messages"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-messages-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="container-fluid d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <div class="featured-text">
+                      <h1 class="text-fancy">Bistek Tagalog</h1>
+                      <h6 class="text-muted">
+                        "Savory, tender, and packed with flavor—Bistek Tagalog,
+                        your ultimate beef craving satisfied! 🥩🍋"
+                      </h6>
+                      <br />
+                      <p>
+                        Bistek Tagalog is made by marinating thinly sliced beef
+                        in soy sauce, calamansi (or lemon), and garlic, then
+                        pan-frying it until tender and infused with bold
+                        flavors. It’s typically served with onions, creating a
+                        deliciously savory dish perfect with steamed rice.
+                      </p>
+					  <button
+                class="btn btn-colored"
+                data-bs-toggle="modal"
+                data-bs-target="#ln-2-recipe"
+              >
+                View Recipe
+              </button>
+                    </div>
+                    <div class="featured-image">
+                      <img
+                        src="assets/images/featured-4.jpeg"
+                        height="300"
+                        width="300"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-settings"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-settings-tab"
+                  tabindex="0"
+                >
+                  <div
+                    class="container-fluid d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <div class="featured-text">
+                      <h1 class="text-fancy">Filipino Fried Chicken</h1>
+                      <h6 class="text-muted">
+                        "Crispy, golden, and packed with flavor—Filipino-style
+                        fried chicken, a crispy delight in every bite! 🍗✨"
+                      </h6>
+                      <br />
+                      <p>
+                        Filipino-style fried chicken is marinated in a blend of
+                        soy sauce, garlic, and spices before being coated in a
+                        crispy batter and fried to golden perfection. The result
+                        is a juicy, flavorful chicken with a satisfying crunch,
+                        often served with a side of gravy or dipping sauce for
+                        extra indulgence.
+                      </p>
+					  <button
+                class="btn btn-colored"
+                data-bs-toggle="modal"
+                data-bs-target="#dn-2-recipe"
+              >
+                View Recipe
+              </button>
+                    </div>
+                    <div class="featured-image">
+                      <img
+                        src="assets/images/featured-5.jpeg"
+                        height="300"
+                        width="300"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-browse" class="section">
+      <div class="section-browse-backdrop"></div>
+      <div class="section-title">
+        <h1>
+          <span class="text-highlight">Browse</span>
+          recipes
+        </h1>
+        <h5 class="text-light">Browse from our list of recipes</h5>
+      </div>
+      <div class="section-body">
+        <div class="card">
+          <div class="card-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#breakfast"
+                  type="button"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                >
+                  Breakfast
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#lunch"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  Lunch
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dinner"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                >
+                  Dinner
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dessert"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                >
+                  Dessert
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="breakfast"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <div class="container-fluid p-4">
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Beef Tapa</h5>
+                          <img
+                            src="assets/images/bf-1.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bf-1-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Champorado</h5>
+                          <img
+                            src="assets/images/bf-2.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bf-2-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Longanissang Lucban</h5>
+                          <img
+                            src="assets/images/bf-3.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#bf-3-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="lunch"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <div class="container-fluid p-4">
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Chicken Adobo</h5>
+                          <img
+                            src="assets/images/featured-1.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#ln-1-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Bistek Tagalog</h5>
+                          <img
+                            src="assets/images/featured-4.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#ln-2-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Ginisang Monggo</h5>
+                          <img
+                            src="assets/images/ln-1.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#ln-3-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="dinner"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                <div class="container-fluid p-4">
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Pork Sinigang</h5>
+                          <img
+                            src="assets/images/featured-2.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#dn-1-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Filipino Fried Chicken</h5>
+                          <img
+                            src="assets/images/featured-5.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#dn-2-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Bulalo</h5>
+                          <img
+                            src="assets/images/dn-1.jpeg"
+                            alt=""
+                            height="100%"
+                            width="70%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#dn-3-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="dessert"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                <div class="container-fluid p-4">
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Leche Flan</h5>
+                          <img
+                            src="assets/images/featured-3.jpeg"
+                            alt=""
+                            height="100%"
+                            width="50%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#ds-1-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="recipe-card card p-2 d-flex align-items-center justify-content-center"
+                          style="gap: 20px"
+                        >
+                          <h5 class="card-title">Halo-Halo</h5>
+                          <img
+                            src="assets/images/ds-1.jpeg"
+                            alt=""
+                            height="100%"
+                            width="50%"
+                          />
+                          <button
+                            class="btn btn-colored"
+                            data-bs-toggle="modal"
+                            data-bs-target="#ds-2-recipe"
+                          >
+                            View Recipe
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-about" class="section">
+      <div class="section-title">
+        <h1>
+          <span class="text-highlight">About</span>
+          us
+        </h1>
+        <h5>Why should you trust our recipes?</h5>
+      </div>
+      <div class="section-body">
+        <div
+          class="about container d-flex flex-row align-items-center justify-content-between"
+        >
+          <div class="section-about-img">
+            <img src="assets/images/about.jpeg" alt="" srcset="" />
+          </div>
+          <div
+            class="section-about-text d-flex flex-column align text-left p-4"
+          >
+            <h1 class="text-fancy">We only offer the best of the best</h1>
+            <h6>
+              Every recipe is carefully selected to ensure it meets the highest
+              standards of taste, simplicity, and tradition, so you can trust
+              that you're getting the very best culinary experience with every
+              meal. We follow 4 standards in selecting recipes:
+            </h6>
+
+            <ul class="about-list" style="list-style: none; padding-left: 0">
+              <li>
+                <i class="bi bi-check2-all text-highlight"></i>
+                <span
+                  >We prioritize recipes that stay true to their cultural roots,
+                  ensuring that each dish captures the essence of traditional
+                  flavors and techniques.</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-check2-all text-highlight"></i>
+                <span
+                  >We conduct thorough taste testing to ensure that each recipe
+                  delivers on flavor, balance, and overall satisfaction.</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-check2-all text-highlight"></i>
+                <span
+                  >We select recipes that are not only delicious but also
+                  accessible and easy to follow, making sure you can create
+                  mouthwatering meals without hassle.</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-check2-all text-highlight"></i>
+                <span
+                  >Only recipes that use fresh, high-quality ingredients make
+                  the cut. We believe the best dishes are made with the finest
+                  components.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section-contact" class="section">
+      <div class="section-title">
+        <h1>
+          <span class="text-highlight">Contact</span>
+          us
+        </h1>
+        <h5>We would love to hear from you</h5>
+      </div>
+      <div class="section-body">
+        <div class="contact container w-50">
+          <div class="card text-center p-2">
+            <h5>Stay in touch with us</h5>
+            <div class="row mt-4">
+              <div class="col">
+                <h1 class="text-highlight">
+                  <i class="bi bi-envelope-at"></i>
+                </h1>
+                <h6 class="text-fancy">Email Address</h6>
+                <span class="text-muted">goodeats.co@gmail.com</span>
+              </div>
+              <div class="col">
+                <h1 class="text-highlight"><i class="bi bi-phone"></i></h1>
+                <h6 class="text-fancy">Mobile Number</h6>
+                <span class="text-muted">(+63)943-433-2492</span>
+              </div>
+              <div class="col">
+                <h1 class="text-highlight"><i class="bi bi-facebook"></i></h1>
+                <h6 class="text-fancy">Facebook</h6>
+                <span class="text-muted">@goodeats.co</span>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <h3>Send us a message directly</h3>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  placeholder="Enter subject"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Write your message here"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-colored w-25">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="modal fade"
+      id="bf-1-recipe"
+      tabindex="-1"
+      aria-labelledby="bf-1-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Beef Tapa</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a href="https://www.foxyfolksy.com/beef-tapa-recipe/"
+                >Beef Tapa</a
+              >
+            </h5>
+            <img src="assets/images/bf-1.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">300 g</th>
+                  <td>Beef Sirloin - cut into thin slices</td>
+                </tr>
+                <tr>
+                  <th scope="row">3 tbsp</th>
+                  <td>Soy Sauce</td>
+                </tr>
+                <tr>
+                  <th scope="row">3 tbsp</th>
+                  <td>Calamansi or Lemon juice</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 tbsp</th>
+                  <td>Garlic - finely minced</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/8 tsp</th>
+                  <td>Ground pepper</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/2 tsp</th>
+                  <td>Sugar</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/4 tsp</th>
+                  <td>Baking soda (optional)</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 bottle</th>
+                  <td>Oil - for frying</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                Using a mallet or any blunt object, pound each cut of meat until
+                meat is flattened to about a quarter inch thick.
+              </li>
+              <li class="list-group-item">
+                Place the beef into a bowl and sprinkle with the baking soda.
+                Mix until well blended.
+              </li>
+              <li class="list-group-item">
+                Add lemon juice and mix again several times. Then add the rest
+                of the ingredients.
+              </li>
+              <li class="list-group-item">
+                Cover the bowl with plastic wrap and marinate beef in the fridge
+                overnight.
+              </li>
+              <li class="list-group-item">
+                Heat a tablespoon of oil in a large pan or skillet. Fry each
+                side of the meat for 3-5 minutes or until browned and the
+                liquids are absorbed. Add more oil as needed.
+              </li>
+              <li class="list-group-item">
+                Serve with sunny-side-up egg and garlic fried rice while still
+                hot.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="bf-2-recipe"
+      tabindex="-1"
+      aria-labelledby="bf-2-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Champorado</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a href="https://www.foxyfolksy.com/champorado">Champorado</a>
+            </h5>
+            <img src="assets/images/bf-2.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">200 g</th>
+                  <td>Glutinous Rice</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 liter</th>
+                  <td>Water</td>
+                </tr>
+                <tr>
+                  <th scope="row">50 g</th>
+                  <td>Cocoa Powder</td>
+                </tr>
+                <tr>
+                  <th scope="row">100 g</th>
+                  <td>Sugar</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 pinch</th>
+                  <td>Salt</td>
+                </tr>
+                <tr>
+                  <th scope="row">250 ml</th>
+                  <td>Evaporated Milk or Condensed Milk (for topping)</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a pot, bring the water to a boil. Add the glutinous rice and
+                stir to prevent sticking.
+              </li>
+              <li class="list-group-item">
+                Reduce heat to medium and continue cooking, stirring
+                occasionally, until the rice is tender and the mixture thickens.
+              </li>
+              <li class="list-group-item">
+                Dissolve cocoa powder in a small amount of hot water to make a
+                paste. Add it to the rice mixture and stir well.
+              </li>
+              <li class="list-group-item">
+                Add sugar and a pinch of salt. Mix until well combined. Adjust
+                sweetness to your preference.
+              </li>
+              <li class="list-group-item">
+                Serve hot in bowls, drizzled with evaporated or condensed milk
+                on top.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="bf-3-recipe"
+      tabindex="-1"
+      aria-labelledby="bf-3-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Lucban Longganisa
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a
+                href="https://www.mamasguiderecipes.com/2018/02/01/lucban-quezon-longganisa/"
+                >Lucban Longganisa</a
+              >
+            </h5>
+            <img src="assets/images/bf-3.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">1 kg</th>
+                  <td>Ground Pork Belly (lean meat)</td>
+                </tr>
+                <tr>
+                  <th scope="row">4 tbsp</th>
+                  <td>Garlic, finely minced</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 tbsp</th>
+                  <td>Fresh Oregano, minced</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 tbsp</th>
+                  <td>Paprika</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 tbsp</th>
+                  <td>Sugar</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 tbsp</th>
+                  <td>Salt</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 tbsp</th>
+                  <td>Ground Black Pepper</td>
+                </tr>
+                <tr>
+                  <th scope="row">60 ml</th>
+                  <td>Vinegar</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sufficient quantity</th>
+                  <td>Pork Casings (optional)</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a large bowl, combine the ground pork, minced garlic, minced
+                oregano, paprika, sugar, salt, ground black pepper, and vinegar.
+                Mix thoroughly until well combined.
+              </li>
+              <li class="list-group-item">
+                Cover the bowl with plastic wrap and let the mixture marinate in
+                the refrigerator for at least 2 hours, or overnight for better
+                flavor.
+              </li>
+              <li class="list-group-item">
+                If using pork casings, soak them in warm water to soften, then
+                rinse thoroughly. Stuff the marinated meat mixture into the
+                casings and tie off at desired lengths. If making skinless
+                longganisa, shape the meat mixture into logs about 4 inches (10
+                cm) long and 1 inch (2.5 cm) thick.
+              </li>
+              <li class="list-group-item">
+                Arrange the longganisa in a container, separating layers with
+                parchment paper to prevent sticking. Freeze for at least 3 hours
+                or until firm.
+              </li>
+              <li class="list-group-item">
+                To cook, place the longganisa in a pan with about 1/2 cup (120
+                ml) of water. Bring to a boil, then lower the heat and simmer
+                until the water evaporates. Once the pan is dry, add a little
+                oil and fry the sausages until browned and fully cooked.
+              </li>
+              <li class="list-group-item">
+                Serve hot with steamed rice or fried rice, and enjoy!
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="ln-1-recipe"
+      tabindex="-1"
+      aria-labelledby="ln-1-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Chicken and Pork Adobo
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a href="https://www.kawalingpinoy.com/chicken-pork-adobo/"
+                >Chicken and Pork Adobo</a
+              >
+            </h5>
+            <img src="assets/images/featured-1.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">700 g</th>
+                  <td>Pork Belly, cut into 2-inch cubes</td>
+                </tr>
+                <tr>
+                  <th scope="row">700 g</th>
+                  <td>Chicken, cut into serving pieces</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 tbsp</th>
+                  <td>Canola Oil</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Onion, peeled and sliced thinly</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 head</th>
+                  <td>Garlic, peeled and minced</td>
+                </tr>
+                <tr>
+                  <th scope="row">240 ml</th>
+                  <td>Vinegar</td>
+                </tr>
+                <tr>
+                  <th scope="row">120 ml</th>
+                  <td>Soy Sauce</td>
+                </tr>
+                <tr>
+                  <th scope="row">240 ml</th>
+                  <td>Water</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Bay Leaves</td>
+                </tr>
+                <tr>
+                  <th scope="row">To taste</th>
+                  <td>Salt and Pepper</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a wide pan over medium heat, heat oil. Add onions and garlic
+                and cook until softened.
+              </li>
+              <li class="list-group-item">
+                Add pork and cook, turning as needed, until lightly browned.
+                Cook, stirring occasionally, for about 7 to 10 minutes.
+              </li>
+              <li class="list-group-item">
+                Add chicken and cook, stirring occasionally, until lightly
+                browned and juices run clear.
+              </li>
+              <li class="list-group-item">
+                Add vinegar and bring to a boil, uncovered and without stirring,
+                for about 2 to 3 minutes.
+              </li>
+              <li class="list-group-item">
+                Add soy sauce, water, and bay leaves. Continue to boil, skimming
+                scum that floats on top.
+              </li>
+              <li class="list-group-item">
+                Lower heat, cover, and simmer until meat is tender and sauce is
+                reduced.
+              </li>
+              <li class="list-group-item">
+                Adjust taste with salt and pepper as needed.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="ln-2-recipe"
+      tabindex="-1"
+      aria-labelledby="ln-2-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Bistek Tagalog</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a href="https://www.kawalingpinoy.com/bistek/">Bistek Tagalog</a>
+            </h5>
+            <img src="assets/images/featured-4.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">1 kg</th>
+                  <td>Beef Sirloin or Tenderloin, thinly sliced</td>
+                </tr>
+                <tr>
+                  <th scope="row">120 ml</th>
+                  <td>Soy Sauce</td>
+                </tr>
+                <tr>
+                  <th scope="row">60 ml</th>
+                  <td>Calamansi Juice (or Lemon Juice)</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 tsp</th>
+                  <td>Ground Black Pepper</td>
+                </tr>
+                <tr>
+                  <th scope="row">4 cloves</th>
+                  <td>Garlic, minced</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Large Onions, sliced into rings</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 tbsp</th>
+                  <td>Cooking Oil</td>
+                </tr>
+                <tr>
+                  <th scope="row">240 ml</th>
+                  <td>Water</td>
+                </tr>
+                <tr>
+                  <th scope="row">To taste</th>
+                  <td>Salt</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a bowl, combine beef slices, soy sauce, calamansi juice,
+                ground black pepper, and minced garlic. Mix well and marinate
+                for at least 30 minutes.
+              </li>
+              <li class="list-group-item">
+                Heat 1 tablespoon of cooking oil in a pan over medium heat. Add
+                the onion rings and sauté until they become translucent. Remove
+                from the pan and set aside.
+              </li>
+              <li class="list-group-item">
+                In the same pan, add the remaining 1 tablespoon of cooking oil.
+                Add the marinated beef slices, reserving the marinade, and cook
+                until browned.
+              </li>
+              <li class="list-group-item">
+                Pour in the reserved marinade and water. Bring to a boil, then
+                lower the heat and let it simmer for about 20 to 30 minutes, or
+                until the beef is tender. Adjust the seasoning with salt if
+                necessary.
+              </li>
+              <li class="list-group-item">
+                Once the beef is tender and the sauce has slightly thickened,
+                add the sautéed onion rings back into the pan. Cook for an
+                additional 2 minutes.
+              </li>
+              <li class="list-group-item">
+                Serve hot over steamed rice. Enjoy!
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="ln-3-recipe"
+      tabindex="-1"
+      aria-labelledby="ln-3-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ginisang Monggo</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a
+                href="https://www.kawalingpinoy.com/ginisang-munggo-at-chicharon/"
+                >Ginisang Munggo at Chicharon</a
+              >
+            </h5>
+            <img src="assets/images/ln-1.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">200 g</th>
+                  <td>Mung Beans (Monggo), rinsed and drained</td>
+                </tr>
+                <tr>
+                  <th scope="row">1.5 liters</th>
+                  <td>Water</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 tbsp</th>
+                  <td>Vegetable Oil</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Onion, peeled and sliced thinly</td>
+                </tr>
+                <tr>
+                  <th scope="row">3 cloves</th>
+                  <td>Garlic, peeled and minced</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Roma Tomatoes, chopped</td>
+                </tr>
+                <tr>
+                  <th scope="row">250 g</th>
+                  <td>Pork Belly, cut into bite-sized pieces</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 tbsp</th>
+                  <td>Fish Sauce</td>
+                </tr>
+                <tr>
+                  <th scope="row">100 g</th>
+                  <td>Chicharon (Pork Cracklings), crushed</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 cups</th>
+                  <td>Fresh Spinach Leaves</td>
+                </tr>
+                <tr>
+                  <th scope="row">To taste</th>
+                  <td>Salt and Pepper</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a pot over medium heat, combine mung beans and water. Bring
+                to a boil, skimming off any foam that floats on top. Lower heat,
+                cover, and simmer for about 45 to 60 minutes or until the mung
+                beans are softened and the skins have burst.
+              </li>
+              <li class="list-group-item">
+                In another pot over medium heat, heat oil. Add onions and garlic
+                and sauté until softened.
+              </li>
+              <li class="list-group-item">
+                Add tomatoes and cook, mashing with the back of a spoon, until
+                softened.
+              </li>
+              <li class="list-group-item">
+                Add pork belly and cook until lightly browned.
+              </li>
+              <li class="list-group-item">
+                Add fish sauce and cook for about 1 to 2 minutes.
+              </li>
+              <li class="list-group-item">
+                Add cooked mung beans along with the cooking liquid. Bring to a
+                boil, then lower heat and simmer for about 10 to 15 minutes to
+                allow flavors to meld. If the mixture is too thick, add
+                additional water or broth to reach the desired consistency.
+              </li>
+              <li class="list-group-item">
+                Season with salt and pepper to taste.
+              </li>
+              <li class="list-group-item">
+                Add spinach leaves and cook until just wilted.
+              </li>
+              <li class="list-group-item">
+                Ladle into bowls and top with crushed chicharon. Serve hot.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="dn-1-recipe"
+      tabindex="-1"
+      aria-labelledby="dn-1-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pork Sinigang</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a
+                href="https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/"
+                >Pork Sinigang</a
+              >
+            </h5>
+            <img src="assets/images/featured-2.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">1 kg</th>
+                  <td>Pork Belly, cut into chunks</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 liters</th>
+                  <td>Water</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Medium Onion, quartered</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Roma Tomatoes, quartered</td>
+                </tr>
+                <tr>
+                  <th scope="row">150 g</th>
+                  <td>Taro (Gabi), peeled and quartered</td>
+                </tr>
+                <tr>
+                  <th scope="row">100 g</th>
+                  <td>Radish (Labanos), sliced</td>
+                </tr>
+                <tr>
+                  <th scope="row">100 g</th>
+                  <td>String Beans (Sitaw), cut into 5 cm lengths</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Green Finger Chilies (Siling Pangsigang)</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 bunch</th>
+                  <td>Water Spinach (Kangkong), trimmed</td>
+                </tr>
+                <tr>
+                  <th scope="row">50 g</th>
+                  <td>Tamarind Paste or Sinigang Mix</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 tbsp</th>
+                  <td>Fish Sauce (Patis)</td>
+                </tr>
+                <tr>
+                  <th scope="row">To taste</th>
+                  <td>Salt and Pepper</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a large pot, bring water to a boil. Add pork belly and simmer
+                for 45 minutes to 1 hour, skimming off any scum that rises to
+                the surface.
+              </li>
+              <li class="list-group-item">
+                Add onions and tomatoes. Cook for about 5 minutes until
+                softened.
+              </li>
+              <li class="list-group-item">Add taro and cook until tender.</li>
+              <li class="list-group-item">
+                Add radish and cook for 2 minutes.
+              </li>
+              <li class="list-group-item">
+                Add string beans and green chilies. Cook for another 2 minutes.
+              </li>
+              <li class="list-group-item">
+                Stir in tamarind paste or sinigang mix and fish sauce. Season
+                with salt and pepper to taste.
+              </li>
+              <li class="list-group-item">
+                Add water spinach, stir, and remove from heat. Serve hot with
+                steamed rice.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="dn-2-recipe"
+      tabindex="-1"
+      aria-labelledby="dn-2-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Filipino Fried Chicken
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a
+                href="https://www.kawalingpinoy.com/filipino-style-fried-chicken/"
+                >Filipino Fried Chicken</a
+              >
+            </h5>
+            <img src="assets/images/featured-5.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">1.5 kg</th>
+                  <td>Whole Chicken, cut into serving pieces</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 liter</th>
+                  <td>Water</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Medium Onion, quartered</td>
+                </tr>
+                <tr>
+                  <th scope="row">3 cloves</th>
+                  <td>Garlic, peeled and smashed</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 tbsp</th>
+                  <td>Soy Sauce</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 tbsp</th>
+                  <td>Salt</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 tsp</th>
+                  <td>Ground Black Pepper</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Bay Leaves</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 cups</th>
+                  <td>Cooking Oil (for frying)</td>
+                </tr>
+                <tr>
+                  <th scope="row">To taste</th>
+                  <td>Salt and Pepper (for final seasoning)</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a large pot, combine chicken, water, onion, garlic, soy
+                sauce, salt, pepper, and bay leaves. Bring to a boil, then lower
+                heat and simmer for 20 minutes or until chicken is tender.
+              </li>
+              <li class="list-group-item">
+                Remove chicken from the pot and drain well. Let it cool for a
+                few minutes.
+              </li>
+              <li class="list-group-item">
+                Heat cooking oil in a large skillet or deep fryer over medium
+                heat. Fry chicken pieces in batches until golden and crispy.
+              </li>
+              <li class="list-group-item">
+                Drain on paper towels to remove excess oil. Season with
+                additional salt and pepper, if desired.
+              </li>
+              <li class="list-group-item">
+                Serve hot with steamed rice or a dipping sauce of your choice.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="dn-3-recipe"
+      tabindex="-1"
+      aria-labelledby="dn-3-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Bulalo</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a href="https://www.kawalingpinoy.com/bulalo/">Bulalo</a>
+            </h5>
+            <img src="assets/images/dn-1.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">1.5 kg</th>
+                  <td>Beef Shank, with bone marrow</td>
+                </tr>
+                <tr>
+                  <th scope="row">2 liters</th>
+                  <td>Water</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Large Onion, peeled and quartered</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Corn Cobs, cut into chunks</td>
+                </tr>
+                <tr>
+                  <th scope="row">200 g</th>
+                  <td>Green Beans</td>
+                </tr>
+                <tr>
+                  <th scope="row">200 g</th>
+                  <td>Chinese Cabbage (or Napa Cabbage)</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 tbsp</th>
+                  <td>Fish Sauce</td>
+                </tr>
+                <tr>
+                  <th scope="row">To taste</th>
+                  <td>Salt and Pepper</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a large pot, combine beef shanks, water, and onion. Bring to
+                a boil, then reduce heat to a simmer. Cook for 2 hours or until
+                beef is tender, skimming off scum as needed.
+              </li>
+              <li class="list-group-item">
+                Add corn and continue to simmer for 10 minutes.
+              </li>
+              <li class="list-group-item">
+                Season with fish sauce, salt, and pepper to taste.
+              </li>
+              <li class="list-group-item">
+                Add green beans and cabbage. Cook for 2 minutes or until
+                vegetables are tender but still crisp.
+              </li>
+              <li class="list-group-item">
+                Serve hot with steamed rice and a side of dipping sauce, if
+                desired.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="ds-1-recipe"
+      tabindex="-1"
+      aria-labelledby="ds-1-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Leche Flan</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a href="https://panlasangpinoy.com/leche-flan/">Leche Flan</a>
+            </h5>
+            <img src="assets/images/featured-3.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">10 pieces</th>
+                  <td>Egg Yolks</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 can (14 oz)</th>
+                  <td>Sweetened Condensed Milk</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 cup</th>
+                  <td>Fresh Milk or Evaporated Milk</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 cup</th>
+                  <td>Granulated Sugar</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 teaspoon</th>
+                  <td>Vanilla Extract</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a bowl, beat the egg yolks until smooth.
+              </li>
+              <li class="list-group-item">
+                Add the sweetened condensed milk, fresh milk, and vanilla
+                extract. Mix well until fully combined.
+              </li>
+              <li class="list-group-item">
+                In a separate pan, melt the granulated sugar over low heat until
+                it turns golden brown. Carefully pour the caramel into the
+                bottom of a mold, swirling to coat evenly.
+              </li>
+              <li class="list-group-item">
+                Pour the egg mixture over the caramelized sugar in the mold.
+              </li>
+              <li class="list-group-item">
+                Cover the mold with foil and steam over low heat for about 45
+                minutes, or until set.
+              </li>
+              <li class="list-group-item">
+                Allow to cool, then refrigerate for several hours before
+                serving.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="ds-2-recipe"
+      tabindex="-1"
+      aria-labelledby="ds-2-recipe"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Halo-Halo</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              View recipe source here:
+              <a href="https://www.foxyfolksy.com/halo-halo-recipe/"
+                >Halo-Halo</a
+              >
+            </h5>
+            <img src="assets/images/ds-1.jpeg" height="50%" width="50%" />
+            <h5 class="mt-2">Ingredients</h5>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">1/4 cup</th>
+                  <td>Sweetened Red Beans</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/4 cup</th>
+                  <td>Sweetened White Beans</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 large</th>
+                  <td>Banana, thinly sliced</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/4 cup</th>
+                  <td>Jackfruit, sliced</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/4 cup</th>
+                  <td>Macapuno Strips</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/4 cup</th>
+                  <td>Nata de Coco</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/4 cup</th>
+                  <td>Red Palm Seeds (Kaong)</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 cup</th>
+                  <td>Shaved Ice</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/4 cup</th>
+                  <td>Evaporated Milk</td>
+                </tr>
+                <tr>
+                  <th scope="row">1/4 cup</th>
+                  <td>Sweetened Condensed Milk</td>
+                </tr>
+                <tr>
+                  <th scope="row">1 scoop</th>
+                  <td>Ube Ice Cream</td>
+                </tr>
+              </tbody>
+            </table>
+            <h5 class="mt-4">Instructions</h5>
+            <ol class="list-group list-group-numbered" style="text-align: left">
+              <li class="list-group-item">
+                In a tall glass, layer the sweetened red beans, sweetened white
+                beans, sliced banana, jackfruit, macapuno strips, nata de coco,
+                and red palm seeds.
+              </li>
+              <li class="list-group-item">
+                Add a generous amount of shaved ice on top of the layered
+                ingredients.
+              </li>
+              <li class="list-group-item">
+                Pour the evaporated milk and sweetened condensed milk over the
+                shaved ice.
+              </li>
+              <li class="list-group-item">
+                Top with a scoop of ube ice cream.
+              </li>
+              <li class="list-group-item">
+                Serve immediately, mixing all the ingredients together before
+                eating.
+              </li>
+            </ol>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="modal fade" id="recipe-submit-modal" tabindex="-1" aria-labelledby="recipe-submit-modal-label" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="recipe-submit-modal-label">Submit a New Recipe</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <form>
+			
+				<div class="mb-3">
+				  <label for="name" class="form-label">Your Name</label>
+				  <input type="text" class="form-control" id="name" name="name" required>
+				</div>
+	  
+				
+				<div class="mb-3">
+				  <label for="email" class="form-label">Your Email</label>
+				  <input type="email" class="form-control" id="email" name="email" required>
+				</div>
+	  
+			
+				<div class="mb-3">
+				  <label for="phone" class="form-label">Your Phone Number</label>
+				  <input type="tel" class="form-control" id="phone" name="phone" required>
+				</div>
+	  
+		
+				<div class="mb-3">
+				  <label for="recipe-name" class="form-label">Recipe Name</label>
+				  <input type="text" class="form-control" id="recipe-name" name="recipe-name" required>
+				</div>
+	  
+			
+				<div class="mb-3">
+				  <label for="ingredients" class="form-label">Ingredients</label>
+				  <textarea class="form-control" id="ingredients" name="ingredients" rows="5" placeholder="List all the ingredients here. Separate each ingredient with a comma or new line." required></textarea>
+				</div>
+	  
+				
+				<div class="mb-3">
+				  <label for="steps" class="form-label">Steps</label>
+				  <textarea class="form-control" id="steps" name="steps" rows="5" placeholder="List all the steps here. Separate each step with a number or new line." required></textarea>
+				</div>
+	  
+			
+				<div class="mb-3">
+				  <label for="recipe-image" class="form-label">Recipe Image</label>
+				  <input class="form-control" type="file" id="recipe-image" name="recipe-image" accept="image/*">
+				</div>
+	  
+				
+				<div class="mb-3">
+				  <label for="recipe-link" class="form-label">Recipe Link (Optional)</label>
+				  <input type="url" class="form-control" id="recipe-link" name="recipe-link">
+				</div>
+	  
+				
+				<div class="mt-4 text-center">
+				  <button type="submit" class="btn btn-colored">Submit Recipe</button>
+				</div>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
